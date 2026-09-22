@@ -1,0 +1,4 @@
+copenhagen,denmark
+paris,france
+tokyo,japan
+london,ukgit
