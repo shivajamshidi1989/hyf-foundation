@@ -1,2 +1,4 @@
 Copenhagen
 Berlin
+Stockholm
+Oslo
