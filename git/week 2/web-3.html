@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A simple workspace dashboard for keeping projects on track.">
+	<title>Northstar | Workspace</title>
+	<link rel="stylesheet" href="web-3.css">
+</head>
+<body>
+	<div class="app-shell">
+		<aside class="sidebar" aria-label="Main navigation">
+			<a class="logo" href="#overview" aria-label="Northstar home">
+				<span class="logo-mark" aria-hidden="true">N</span>
+				<span>northstar</span>
+			</a>
+
+			<p class="nav-label">WORKSPACE</p>
+			<nav class="nav-list">
+				<a class="nav-link nav-overview" href="#overview"><span class="nav-icon" aria-hidden="true">⌂</span>Overview</a>
+				<a class="nav-link nav-projects" href="#projects"><span class="nav-icon" aria-hidden="true">▤</span>Projects</a>
+				<a class="nav-link nav-analytics" href="#analytics"><span class="nav-icon" aria-hidden="true">▥</span>Analytics</a>
+				<a class="nav-link nav-team" href="#team"><span class="nav-icon" aria-hidden="true">♧</span>Team</a>
+			</nav>
+
+			<p class="nav-label tools-label">PREFERENCES</p>
+			<nav class="nav-list">
+				<a class="nav-link nav-settings" href="#settings"><span class="nav-icon" aria-hidden="true">⚙</span>Settings</a>
+			</nav>
+
+			<div class="sidebar-bottom">
+				<div class="plan-card">
+					<p class="plan-title">Your free plan</p>
+					<p class="plan-copy">2 of 5 projects used</p>
+					<div class="plan-meter" role="img" aria-label="40 percent of projects used"><span></span></div>
+					<a href="#settings">View plan <span aria-hidden="true">→</span></a>
+				</div>
+				<a class="profile" href="#settings">
+					<span class="avatar" aria-hidden="true">JD</span>
+					<span class="profile-copy"><strong>Jamie Davis</strong><small>Personal workspace</small></span>
+					<span class="profile-menu" aria-hidden="true">···</span>
+				</a>
+			</div>
+		</aside>
+
+		<main class="main-area">
+			<header class="topbar">
+				<p>Monday, September 28, 2026</p>
+				<a class="topbar-action" href="#team"><span aria-hidden="true">＋</span> Invite teammates</a>
+			</header>
+
+			<section class="view overview-view" id="overview" aria-labelledby="overview-title">
+				<div class="page-heading">
+					<div><p class="eyebrow">YOUR WORKSPACE</p><h1 id="overview-title">Good morning, Jamie <span aria-hidden="true">✳</span></h1><p class="page-subtitle">Here’s what’s happening across your projects.</p></div>
+					<a class="primary-action" href="#projects"><span aria-hidden="true">＋</span> New project</a>
+				</div>
+
+				<div class="metric-grid">
+					<article class="metric-panel"><div class="metric-top"><span>Active projects</span><span class="metric-symbol mint" aria-hidden="true">▤</span></div><p class="metric-value">08</p><p class="metric-note"><span class="positive">↗ 2</span> from last month</p></article>
+					<article class="metric-panel"><div class="metric-top"><span>Tasks completed</span><span class="metric-symbol peach" aria-hidden="true">✓</span></div><p class="metric-value">124</p><p class="metric-note"><span class="positive">↗ 12%</span> from last month</p></article>
+					<article class="metric-panel"><div class="metric-top"><span>Hours tracked</span><span class="metric-symbol blue" aria-hidden="true">◷</span></div><p class="metric-value">36.5</p><p class="metric-note"><span class="positive">↗ 4.5</span> from last week</p></article>
+				</div>
+
+				<div class="overview-grid">
+					<section class="panel activity-panel" aria-labelledby="activity-title">
+						<div class="panel-heading"><div><h2 id="activity-title">Weekly activity</h2><p>Your team's progress this week</p></div><a href="#analytics" class="text-link">View report <span aria-hidden="true">→</span></a></div>
+						<div class="chart" role="img" aria-label="Bar chart showing weekly activity, highest on Friday">
+							<div class="chart-y-axis"><span>40</span><span>30</span><span>20</span><span>10</span><span>0</span></div>
+							<div class="chart-plot">
+								<div class="chart-gridlines"><i></i><i></i><i></i><i></i><i></i></div>
+								<div class="bars"><div class="bar-column"><span class="bar" style="--bar-height: 42%"></span><small>Mon</small></div><div class="bar-column"><span class="bar" style="--bar-height: 66%"></span><small>Tue</small></div><div class="bar-column"><span class="bar" style="--bar-height: 51%"></span><small>Wed</small></div><div class="bar-column"><span class="bar" style="--bar-height: 78%"></span><small>Thu</small></div><div class="bar-column"><span class="bar bar-highlight" style="--bar-height: 91%"></span><small>Fri</small></div><div class="bar-column"><span class="bar" style="--bar-height: 58%"></span><small>Sat</small></div><div class="bar-column"><span class="bar" style="--bar-height: 34%"></span><small>Sun</small></div></div>
+							</div>
+						</div>
+					</section>
+
+					<section class="panel tasks-panel" aria-labelledby="tasks-title">
+						<div class="panel-heading"><div><h2 id="tasks-title">Upcoming tasks</h2><p>What needs your attention</p></div><a href="#projects" class="more-link" aria-label="See all projects">···</a></div>
+						<ul class="task-list">
+							<li><span class="task-dot coral"></span><span class="task-copy"><strong>Review homepage draft</strong><small>Website redesign</small></span><time datetime="2026-09-29">Sep 29</time></li>
+							<li><span class="task-dot green"></span><span class="task-copy"><strong>Send project update</strong><small>Q4 campaign</small></span><time datetime="2026-09-30">Sep 30</time></li>
+							<li><span class="task-dot blue-dot"></span><span class="task-copy"><strong>Prepare kickoff notes</strong><small>Website redesign</small></span><time datetime="2026-10-02">Oct 02</time></li>
+						</ul>
+						<a href="#projects" class="all-tasks">See all tasks <span aria-hidden="true">→</span></a>
+					</section>
+				</div>
+			</section>
+
+			<section class="view destination-view" id="projects" aria-labelledby="projects-title">
+				<div class="page-heading"><div><p class="eyebrow">YOUR WORKSPACE</p><h1 id="projects-title">Projects</h1><p class="page-subtitle">Keep every moving piece in one place.</p></div><a class="primary-action" href="#projects"><span aria-hidden="true">＋</span> New project</a></div>
+				<div class="project-grid">
+					<article class="project-card"><div class="project-card-top"><span class="project-mark coral-mark">W</span><span class="status-pill in-progress">In progress</span></div><h2>Website redesign</h2><p>Refresh the storefront and simplify the customer journey.</p><div class="project-progress"><span>Progress</span><strong>72%</strong></div><div class="progress-track"><span style="width:72%"></span></div><div class="project-card-bottom"><span>Due Oct 14</span><span class="mini-avatars"><i>JD</i><i>MK</i><i>+2</i></span></div></article>
+					<article class="project-card"><div class="project-card-top"><span class="project-mark green-mark">Q</span><span class="status-pill in-progress">In progress</span></div><h2>Q4 campaign</h2><p>Plan the launch campaign for the upcoming season.</p><div class="project-progress"><span>Progress</span><strong>48%</strong></div><div class="progress-track"><span style="width:48%"></span></div><div class="project-card-bottom"><span>Due Oct 22</span><span class="mini-avatars"><i>JD</i><i>AL</i><i>+1</i></span></div></article>
+					<article class="project-card create-project"><a href="#projects"><span class="create-plus">＋</span><strong>Create a project</strong><small>Start something new with your team</small></a></article>
+				</div>
+			</section>
+
+			<section class="view destination-view" id="analytics" aria-labelledby="analytics-title">
+				<div class="page-heading"><div><p class="eyebrow">INSIGHTS</p><h1 id="analytics-title">Analytics</h1><p class="page-subtitle">A closer look at your team's work.</p></div><span class="date-filter">This week <span aria-hidden="true">⌄</span></span></div>
+				<div class="metric-grid"><article class="metric-panel"><div class="metric-top"><span>Tasks completed</span><span class="metric-symbol peach" aria-hidden="true">✓</span></div><p class="metric-value">124</p><p class="metric-note"><span class="positive">↗ 12%</span> vs. last week</p></article><article class="metric-panel"><div class="metric-top"><span>Team capacity</span><span class="metric-symbol mint" aria-hidden="true">♧</span></div><p class="metric-value">84%</p><p class="metric-note">Across 6 team members</p></article><article class="metric-panel"><div class="metric-top"><span>On-time delivery</span><span class="metric-symbol blue" aria-hidden="true">◷</span></div><p class="metric-value">96%</p><p class="metric-note"><span class="positive">↗ 3%</span> vs. last week</p></article></div>
+				<section class="panel analytics-panel"><div class="panel-heading"><div><h2>Work completed</h2><p>Tasks finished each day</p></div></div><div class="large-chart" role="img" aria-label="Weekly work completed chart"><div class="large-chart-bars"><i style="--bar-height:48%"></i><i style="--bar-height:70%"></i><i style="--bar-height:58%"></i><i style="--bar-height:85%"></i><i style="--bar-height:94%"></i><i style="--bar-height:63%"></i><i style="--bar-height:37%"></i></div><div class="large-chart-days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div></section>
+			</section>
+
+			<section class="view destination-view" id="team" aria-labelledby="team-title">
+				<div class="page-heading"><div><p class="eyebrow">YOUR WORKSPACE</p><h1 id="team-title">Team</h1><p class="page-subtitle">The people making good work happen.</p></div><a class="primary-action" href="#team"><span aria-hidden="true">＋</span> Invite people</a></div>
+				<section class="panel team-panel"><div class="team-row team-header"><span>MEMBER</span><span>ROLE</span><span>PROJECTS</span><span>STATUS</span></div><div class="team-row"><span class="member-name"><i class="avatar">JD</i><strong>Jamie Davis</strong></span><span>Workspace owner</span><span>2 projects</span><span class="member-status">Active</span></div><div class="team-row"><span class="member-name"><i class="avatar avatar-rose">MK</i><strong>Morgan Kim</strong></span><span>Designer</span><span>2 projects</span><span class="member-status">Active</span></div><div class="team-row"><span class="member-name"><i class="avatar avatar-yellow">AL</i><strong>Alex Lee</strong></span><span>Marketing</span><span>1 project</span><span class="member-status">Active</span></div><div class="team-row"><span class="member-name"><i class="avatar avatar-blue">SR</i><strong>Sam Rivera</strong></span><span>Developer</span><span>1 project</span><span class="member-status">Active</span></div></section>
+			</section>
+
+			<section class="view destination-view" id="settings" aria-labelledby="settings-title">
+				<div class="page-heading"><div><p class="eyebrow">WORKSPACE</p><h1 id="settings-title">Settings</h1><p class="page-subtitle">Manage your workspace preferences.</p></div></div>
+				<section class="panel settings-panel"><div class="settings-section"><div><h2>Workspace name</h2><p>This name is visible to everyone on your team.</p></div><label class="settings-field">Name<input type="text" value="Jamie's workspace"></label></div><div class="settings-section"><div><h2>Email notifications</h2><p>Get updates about project activity and due dates.</p></div><label class="toggle-setting"><span>Send me email updates</span><input type="checkbox" checked><i aria-hidden="true"></i></label></div><div class="settings-section"><div><h2>Workspace visibility</h2><p>Only invited members can access this workspace.</p></div><span class="visibility-status">Private</span></div></section>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
