@@ -442,7 +442,7 @@ footer > p {
 @media (max-width: 767px) {
 
   nav {
-    flex-direction: column;
+    flex-digitrection: column;
     gap: 20px;
   }
 
