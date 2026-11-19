@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HYF Backend Dashboard</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div class="card">
+    <h1>HackYourFuture Backend</h1>
+    <p>Total users in database:</p>
+    <div id="user-count">Loading...</div>
+  </div>
+
+  <script>
+    async function loadUserCount() {
+      try {
+        const response = await fetch("/user-count");
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch user count");
+        }
+
+        const data = await response.json();
+        document.getElementById("user-count").textContent = data.count;
+      } catch (error) {
+        document.getElementById("user-count").textContent = "Error";
+        console.error(error);
+      }
+    }
+
+    loadUserCount();
+  </script>
+</body>
+</html>
