@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background:
+            radial-gradient(circle at top, #293958 0%, #101827 55%, #080d18 100%);
+    color: #f7e9c7;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    line-height: 1.5;
+    color: #e7c783;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 100%;
+    padding: 15px 18px;
+    background: #101a2a;
+    border: 1px solid #55617a;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #8994a9;
+}
+
+
+button {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+#button {
+    color: #182033;
+    background: linear-gradient(135deg, #f3d99a, #b98c42);
+    box-shadow: 0 5px 20px rgba(185, 140, 66, 0.2);
+}
+
+#reset {
+    background: transparent;
+    color: #e7c783;
+    border: 1px solid #9a7e4d;
+}
+
+#output {
+    color: #f3d99a;
+    font-family: 'Cinzel', serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
